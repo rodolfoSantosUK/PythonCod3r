@@ -13,3 +13,4 @@ getcontext().prec = 4
 print(Decimal(1) / Decimal(4))
 
 print(Decimal.max(Decimal(1), Decimal(7)))
+
