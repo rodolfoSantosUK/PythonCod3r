@@ -9,8 +9,18 @@ class Projeto:
     def __iter__(self):
         return self.tarefas.__iter__()
 
-    def add(self, descricao, vencimento=None):
-        self.tarefas.append(Tarefa(descricao, vencimento))
+    def _add_tarefa(self, tarefa, **kwargs):
+        self.tarefas.append(tarefa)
+
+    def _add_nova_tarefa(self, descricao, **kwargs):
+        self.tarefas.append(Tarefa(descricao, kwargs.get('vencimento', None)))
+
+    def add(self, tarefa, vencimento=None, **kwargs):
+        funcao_escolhida = self._add_tarefa if isinstance(tarefa, Tarefa) \
+            else self._add_nova_tarefa
+        kwargs['vencimento'] = vencimento
+        funcao_escolhida(tarefa, **kwargs)
+
 
     def pendentes(self):
         return [tarefa for tarefa in self.tarefas if not tarefa.feito]
