@@ -21,7 +21,6 @@ class Projeto:
         kwargs['vencimento'] = vencimento
         funcao_escolhida(tarefa, **kwargs)
 
-
     def pendentes(self):
         return [tarefa for tarefa in self.tarefas if not tarefa.feito]
 
