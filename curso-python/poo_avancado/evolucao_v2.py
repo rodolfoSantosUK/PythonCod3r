@@ -25,7 +25,7 @@ class Humano:
     @staticmethod
     def especies():
         adjetivos = ('Habbilis', 'Erectus', 'Sapiens')
-        return ('Australopiteco', ) + tuple(f'Homo {adj}' for adj in adjetivos )
+        return ('Australopitoooooo,oeco', ) + tuple(f'Homo {adj}' for adj in adjetivos )
 
     @classmethod
     def is_evoluido(cls):
