@@ -17,3 +17,4 @@ class Humano(metaclass=ABCMeta):
 
 
 if __name__ == '__main__':
+    pass
