@@ -2,8 +2,8 @@
 
 class Animal:
 
-    @property
-    def capacidade(self):
+  @property
+  def capacidade(self):
         return ('dormir', 'comer','beber')
 
 class Homem(Animal):
